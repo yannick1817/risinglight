@@ -18,7 +18,7 @@ pub struct ExtSource {
 pub enum FileFormat {
     Csv {
         /// Delimiter to parse.
-        delimiter: char,
+        delimiter: charrrr,
         /// Quote to use.
         quote: char,
         /// Escape character to use.
