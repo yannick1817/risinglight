@@ -16,7 +16,7 @@ env:
 
 jobs:
   fmt:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: arduino/setup-protoc@v1
@@ -40,7 +40,7 @@ jobs:
         run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
 
   test:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: arduino/setup-protoc@v1
@@ -64,7 +64,7 @@ jobs:
         run: cargo test --doc --workspace --no-fail-fast --all-features --locked
 
   tpch-test:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: arduino/setup-protoc@v1
