@@ -60,7 +60,7 @@ impl Database {
         Ok(())
     }
 
-    /// Convert a command to SQL.
+    /// Convert a command to SQL..
     fn command_to_sql(&self, cmd: &str) -> Result<String, Error> {
         let tokens = cmd.split_whitespace().collect::<Vec<_>>();
         Ok(match tokens.as_slice() {
