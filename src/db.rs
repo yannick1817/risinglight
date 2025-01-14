@@ -288,7 +288,7 @@ impl rustyline::completion::Completer for &Database {
                 replacement: format!("{command} "),
             })
             .collect();
-        Ok((pos - last_word.len() - 1, candidates))
+        Ok((pos - last_word.len(), candidates))
     }
 }
 
